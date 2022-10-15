@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="crop_datavis"></div>
+<script>
+
+
+var data = [
+  {
+    x: ['Corn', 'Cotton', 'Peanut', 'Rice', 'Wheat'],
+    y: [-42, 38, -26, 74, 57],
+    type: 'bar'
+  }
+];
+
+Plotly.newPlot('crop_datavis', data);
+    
+    </script>

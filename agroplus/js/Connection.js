@@ -2,6 +2,7 @@ const { Client } = require("pg");
 const DATABASE_URL="postgresql://sairaja:w1vrDBPKPOP7CRO9IPgfIA@free-tier14.aws-us-east-1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&options=--cluster%3Dbitter-marten-5761"
 const client = new Client(process.env.DATABASE_URL);
 
+function init_connection(){
 (async () => {
   await client.connect();
   try {
@@ -12,4 +13,4 @@ const client = new Client(process.env.DATABASE_URL);
   } finally {
     client.end();
   }
-})();
+})();}

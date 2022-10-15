@@ -14,7 +14,7 @@ body {
 	border:0;
 	float:right;
 	background:#fff;
-	color:#f00;
+	color:rgb(242, 78, 78);
 	width:50%;
 	line-height:10px;
 	font-size:10px;
@@ -102,7 +102,7 @@ h6 {
 	line-height:24px;
 }
 .heading-1 {
-	color:#b30404;
+	color:#ca3434;
 }
 /*----- text & typography -----*/
 .def-list-1 {
@@ -151,7 +151,7 @@ h6 {
 	margin:0 0 0 6px;
 }
 strong {
-	color:#b30404;
+	color:#cc3232;
 }
 .str-1 {
 	font-weight:normal;
@@ -254,7 +254,7 @@ p {
 .list-1 li {
 	display:block;
 	padding:4px 0 4px 16px;
-	border-top:1px solid #323232;
+	border-top:1px solid #38221c;
 	background:url(../images/list-1-marker.gif) no-repeat 0 10px;
 }
 .list-1 li:first-child {
@@ -400,7 +400,7 @@ header .inner {
 	line-height:110px;
 }
 .mp-slider .mp-ban-2 .row-2, .mp-slider .mp-ban-2 .row-3 {
-	color:#ad0000;
+	color:#ac1b1b;
 	margin:-40px 0 0 0;
 }
 .mp-slider .mp-ban-3 .row-1 {
@@ -516,7 +516,7 @@ section#content {
 	font-family: 'Passion One', cursive;
 	font-size:24px;
 	line-height:30px;
-	color:#b30404;
+	color:#ac2525;
 	margin:0 5px 0 0;
 }
 .price-list li {
@@ -547,7 +547,7 @@ section#content {
 	margin:0 0 0 6px;
 	width:60px;
 	text-align:left;
-	color:#b30404;
+	color:#b12929;
 }
 .adress {
 	padding:0 0 20px 0;
@@ -620,5 +620,5 @@ footer a {
 	background:#585858;
 }
 .social-list li a:hover {
-	background:#b30404;
+	background:#ae1e1e;
 }

@@ -11,6 +11,7 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   init_connection(res);
+  // sentiment_analysis("I am so mad right now");
   res.end('Hello World');
 });
 
@@ -32,3 +33,31 @@ function init_connection(res){
     }
     })();
 }
+
+async function sentiment_analysis(text) {
+  // Imports the Google Cloud client library
+  const language = require('@google-cloud/language');
+  // const keyfile = require("../../../../../virtual-rarity-365619-febe11feac95.json")
+
+  const config = {
+	  projectId: "farm-fresh-news",
+	  keyFilename: "../../../../../farm-fresh-news-b2f156736747.json"
+	};
+
+  // Instantiates a client
+  const client = new language.LanguageServiceClient();
+
+  const document = {
+    content: text,
+    type: 'PLAIN_TEXT',
+  };
+
+  // Detects the sentiment of the text
+  const [result] = await client.analyzeSentiment({document: document});
+  const sentiment = result.documentSentiment;
+
+  console.log(`Text: ${text}`);
+  console.log(`Sentiment score: ${sentiment.score}`);
+  console.log(`Sentiment magnitude: ${sentiment.magnitude}`);
+}
+

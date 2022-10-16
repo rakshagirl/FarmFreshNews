@@ -18,7 +18,7 @@
 <div class="main-bg">
   <!-- Header -->
   <header>
-    <div class="inner">
+    <div class="inner" id="news-articles" >
       <h1 class="logo"><a href="index.html">FarmFreshNews - Agriculture News</a></h1>
       <nav>
         <ul class="sf-menu">
@@ -83,25 +83,37 @@
                 </div>
                 <div class="alignright"> <a href="products.html" class="button">Read more</a> </div>
               </article>
-              <form action="#" id="contact-form" method="post">
+              <form action="#contact-form" id="contact-form">
+                <h3>What product do you want to track?</h3>
                 <fieldset>
                   <label class="name"> <span>Crop Name:</span>
                     <input type="text">
                   </label>
                   <div class="text-center">
-                    <button type="submit">Submit</button>
+                    <button onclick="showCharts()">Submit</button>
                   </div>                
                 </fieldset>
               </form>
               <br/>
+              <div id="charts" style="display: none;">
               <article class="banner-box">
                 <div class="inner">
-                  <h3>FreshFuture</h3>
-                  <h4>Deciding on ideal crops to plant?</h4>
-                  <blockquote class="quote indent-right"> <strong>This website template has several pages: Home, Products, Technology, Pricing, Contacts</strong> (note that contact us form - doesn't work) Vivamus hendrerit mauris ut dui. gravida ut viverra lectus tincidunt. Cras mattis tempor eros nec tristique. Sed sed felis arcu, vel vehicula augue. Maecenas faucibus sagittis cursus. Fusce tincidunt, tellus eget tristique cursus, orci mi iaculis sem. </blockquote>
-                  <div class="alignright indent-right"> <span class="author">John Smith <i>(breeder)</i></span> </div>
-                </div>
-                <img src="images/banner-box-img.png" alt="" class="banner-box-img"> </article>
+                  <h3>Corn's Overall News Index</h3>
+                  <iframe width="501" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQaT1_om0DzlENpx5POl9TQBPN1ncWVhMPEEPLgPXgfnAawHGyXKLA0RFm2WCULL3ZYFOcyGYMOZgZg/pubchart?oid=1620164061&amp;format=interactive"></iframe>
+                </article>
+
+                <article class="banner-box">
+                  <!-- <div class="inner"> -->
+                    <iframe width="570" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQaT1_om0DzlENpx5POl9TQBPN1ncWVhMPEEPLgPXgfnAawHGyXKLA0RFm2WCULL3ZYFOcyGYMOZgZg/pubchart?oid=709265299&amp;format=interactive"></iframe>
+                  <!-- </div> -->
+                  </article>
+                  <br />
+                  <article class="banner-box">
+                    <!-- <div class="inner"> -->
+                      <iframe width="524" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQaT1_om0DzlENpx5POl9TQBPN1ncWVhMPEEPLgPXgfnAawHGyXKLA0RFm2WCULL3ZYFOcyGYMOZgZg/pubchart?oid=1668464304&amp;format=interactive"></iframe>
+                    <!-- </div> -->
+                    </article>
+                  </div>
             </div>
             <div class="grid_5 suffix_1 omega">
               <article class="indent-bot-1">
@@ -110,12 +122,29 @@
                 <p class="hr-border-1"> Use FarmFreshNews's FreshFuture™ dashboard to track the sentiment of farm products, such as future trends, potential disasters, supply chain barriers, etc. Our web crawler scans through thousands of accurate news articles, channels, and television networks to bring up-to-date, analyzed information about current trends on specific crops. </p>
                 <div class="alignright"> <a href="#" class="button">Read more</a> </div>
               </article>
-              <article>
-                <h2>Certified Fresh™ Articles</h2>
+              <div id="news" style="display: none;">
+              <article  >
+                <h2>Corn In the News</h2>
                 <ol class="list-1">
-                  
+                  <li>USDA PROJECTS TIGHTER CORN AND WHEAT SUPPLIES
+                    For corn, USDA pegged the U.S. 2022-2023 ending stocks at 1.172 billion bushels. This is above the trade estimate of 1.126 billion bushels and below USDA's September estimate...
+                    <a href="https://www.agriculture.com/news/business/usda-project-smaller-harvest-for-corn-and-soybeans" target="_blank">Read More</a>
+                  </li>
+                </ol>
+                <ol class="list-1">
+                  <li>IOWA'S CORN YIELDS MIGHT BE OVERSHADOWED BY ILLINOIS THIS YEAR
+                    Iowa farmers are projected to harvest about 200 bushels of corn per acre this year on average — a yield potentially less than Illinois' 210...
+                    <a href="https://www.agriculture.com/news/business/iowa-s-corn-yields-might-be-overshadowed-by-illinois-this-year" target="_blank">Read More</a>
+                  </li>
+                </ol>
+                <ol class="list-1">
+                  <li>China Set to Import Brazilian Corn in Challenge to US Supply
+                    China may start importing corn from Brazil as early as December, part of a drive by the world's top buyer to reduce dependence on the US and replace supplies from Ukraine cut off by the Russian invasion...
+                    <a href="https://www.bloomberg.com/news/articles/2022-10-12/china-set-to-import-brazilian-corn-in-challenge-to-us-suppliers" target="_blank">Read More</a>
+                  </li>
                 </ol>
               </article>
+            </div>
             </div>
           </div>
         </div>
@@ -176,4 +205,15 @@
   </footer>
 </div>
 </body>
+
+<script>
+  function showCharts() {
+    console.log("hello");
+    const elem = document.getElementById('news');
+    const chart = document.getElementById('charts');
+    elem.style.display = "block";
+    chart.style.display = "block";
+  }
+  
+</script>
 </html>

@@ -477,7 +477,6 @@ nav {
 }
 .sf-menu li li > a:hover, .sf-menu li li.sfHover > a, .sf-menu li li.current > a {
 	color:#afaa9b;
-s
 }
 .sf-menu li li li a {
 	background:url(../images/header-bg.png);
@@ -622,4 +621,7 @@ footer a {
 }
 .social-list li a:hover {
 	background:#ae1e1e;
+}
+.text-center {
+	text-align: right;
 }
